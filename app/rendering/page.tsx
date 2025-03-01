@@ -45,6 +45,12 @@ function RenderingPage() {
             <div>
                 <Link href={"/"}>ホームに戻る</Link>
             </div>
+            <div
+                className="border p-2 bg-slate-300 cursor-pointer hover:bg-slate-100"
+            >
+                <Link href={"/rendering/revalidateIsr"}>Revalidateに戻る</Link>
+            </div>
+
         </div>
     )
 }

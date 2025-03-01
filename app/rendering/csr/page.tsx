@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 
@@ -57,6 +58,12 @@ function RenderingClientPage() {
                 >
                     Renderingに戻る
                 </button>
+                <div
+                    className="border p-2 bg-slate-300 cursor-pointer hover:bg-slate-100"
+                >
+                    <Link href={"/rendering/revalidateIsr"}>Revalidateに戻る</Link>
+                </div>
+
             </div>
         </div>
     )
