@@ -29,6 +29,12 @@ function RenderingPage() {
                 >
                     ssg
                 </button>
+                <button
+                    onClick={() => handleClientRouter("ssr/static/isr")}
+                    className="border-2 bg-slate-300 p-2 cursor-pointer hover:bg-slate-100"
+                >
+                    isr
+                </button>
             </div>
             <div>
                 <Link href={"/"}>ホームに戻る</Link>

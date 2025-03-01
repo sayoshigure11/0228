@@ -1,3 +1,4 @@
+export const revalidate = 60
 import Link from "next/link"
 
 type User = {
@@ -11,14 +12,14 @@ type Users = {
 
 const isProp = process.env.NODE_ENV === "development" ? "http://localhost:3000" : process.env.BASE_URL
 
-async function RenderingStaticSSGPage() {
+async function RenderingStaticISRPage() {
     const getData = await fetch(`${isProp}/api/rendering`)
     const getData2: Users = await getData.json()
     const prismaData = [getData2.dataList]
 
     return (
         <div>
-            <h1 className="text-3xl font-semibold">RenderingStaticSSGPage</h1>
+            <h1 className="text-3xl font-semibold">RenderingStaticISRPage</h1>
             <div className="mt-10 flex flex-col gap-y-2">
                 {prismaData.map((data, i) => (
                     <div key={i} className="border p-2 flex flex-col gap-y-1">
@@ -38,4 +39,4 @@ async function RenderingStaticSSGPage() {
     )
 }
 
-export default RenderingStaticSSGPage
+export default RenderingStaticISRPage
