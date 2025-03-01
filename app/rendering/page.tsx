@@ -35,6 +35,12 @@ function RenderingPage() {
                 >
                     isr
                 </button>
+                <button
+                    onClick={() => handleClientRouter("ssr/dynamic")}
+                    className="border-2 bg-slate-300 p-2 cursor-pointer hover:bg-slate-100"
+                >
+                    dynamic
+                </button>
             </div>
             <div>
                 <Link href={"/"}>ホームに戻る</Link>
