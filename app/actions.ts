@@ -17,3 +17,14 @@ export async function myAction(formData: FormData) {
 
     await redis.set("datalist", datalist)
 }
+
+
+
+
+
+import { revalidatePath } from 'next/cache';
+
+export async function revalidateISRPage() {
+  revalidatePath('/rendering/ssr/static/isr');
+  return { success: true, timestamp: Date.now() };
+}
