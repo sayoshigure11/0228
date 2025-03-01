@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 
 function RenderingPage() {
@@ -22,12 +23,15 @@ function RenderingPage() {
                 >
                     csr
                 </button>
-                {/* <button
-                    onClick={() => handleSeverRouter("ssr/dynamic")}
+                <button
+                    onClick={() => handleClientRouter("ssr/static/ssg")}
                     className="border-2 bg-slate-300 p-2 cursor-pointer hover:bg-slate-100"
                 >
-                    dynamic
-                </button> */}
+                    ssg
+                </button>
+            </div>
+            <div>
+                <Link href={"/"}>ホームに戻る</Link>
             </div>
         </div>
     )
